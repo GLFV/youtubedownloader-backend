@@ -4,11 +4,14 @@ const { getInfo } = require('ytdl-getinfo')
 const cors = require('cors')
 const fs = require('fs')
 const { resolve } = require('path')
+
+const PORT = process.env.PORT || 3000
+
 const app = express()
 
 app.use(cors())
 
-const PORT = process.env.PORT || 3000
+//TODO: remove unnecessary comments
 
 // app.get('/', async (req, res) => {
 // 	const url = req.query.URL
@@ -24,6 +27,8 @@ const PORT = process.env.PORT || 3000
 // 	res.download(__dirname + '/video.mp4')
 // })
 
+
+//TODO: add router
 app.get('/', async (req, res) => {
 	const url = req.query.URL
 	let obj = {}
